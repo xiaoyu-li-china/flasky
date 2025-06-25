@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'bootstrap/base.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+{% block title %}Flasky 哈哈哈{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle"
+            data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=" ">Flasky</a >
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('index') }}">Home</a ></li>
+                <li><a href="{{ url_for('index') }}">UpDownCase</a ></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>Hello, {{ name }}, welcome to this website!</h1>
+        <h2>You can learn more about Flasky.</h2>
+        <p><a href="{{ url_for('index') }}">Go to Index</a></p>
+        <p><a href="">Go to 404</a></p>
+    </div>
+</div>
+{% endblock %}
+
+
+
+ {% block scripts %}
+ {{ super() }}
+ <script type="text/javascript" src="my-script.js">
+ alert('hello world!');
+ </script>
+ {% endblock %}
+
+
+
+
+
+
+
+</body>
+</html>

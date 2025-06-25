@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1>nihao</h1>
+{% for user in ['da long','a nan','jia ye']  %}
+<li><p><h1>{{ user|upper }}</h1></p></li>
+    <li>{{ user|lower }}</li>
+{% endfor %}
+
+</body>
+</html>
