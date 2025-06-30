@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from flask import Flask, render_template, abort
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
@@ -11,7 +9,7 @@ moment = Moment(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html', current_time=datetime.utcnow())
+    return render_template('index.html')
 
 
 @app.route('/user/<name>')
@@ -41,6 +39,9 @@ def show_error(name):
     if not user:
         abort(404)
     return render_template('user.html', name=name)
+
+
+
 
 
 if __name__ == '__main__':
